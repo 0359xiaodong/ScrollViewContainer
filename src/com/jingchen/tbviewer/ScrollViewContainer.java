@@ -201,7 +201,11 @@ public class ScrollViewContainer extends RelativeLayout {
 			break;
 
 		}
-		super.dispatchTouchEvent(ev);
+		try {
+			super.dispatchTouchEvent(ev);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return true;
 	}
 
